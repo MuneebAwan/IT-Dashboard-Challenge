@@ -1,4 +1,4 @@
-
+import re
 from time import sleep
 import configparser
 from RPA.Browser.Selenium import Selenium
@@ -162,8 +162,8 @@ def  download_pdf_file(url_list):
         time.sleep(20)
         if os.path.exists(file_source):
             if not os.path.exists(file_destination+"\\"+pdf_name[-1]+".pdf"):
-                
-                shutil.move(os.path.join(file_source, pdf_name[-1]+".pdf"), os.path.join(file_destination, pdf_name[-1]+".pdf"))
+                shutil.move(os.path.join(download_dir, pdf_name[-1]+".pdf"), os.path.join(file_destination, pdf_name[-1]+".pdf"))
+                # shutil.move(file_source , file_destination)
         else:
             print("no file exist")
     browser_lib.close_browser  
