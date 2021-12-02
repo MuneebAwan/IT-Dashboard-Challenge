@@ -1,0 +1,12 @@
+tasks:
+  Run all tasks:
+    shell: python -m tasks
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
