@@ -1,4 +1,4 @@
-import re
+
 from time import sleep
 import configparser
 from RPA.Browser.Selenium import Selenium
