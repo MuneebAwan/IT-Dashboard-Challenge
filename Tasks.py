@@ -162,7 +162,8 @@ def  download_pdf_file(url_list):
         time.sleep(20)
         if os.path.exists(file_source):
             if not os.path.exists(file_destination+"\\"+pdf_name[-1]+".pdf"):
-                shutil.move(file_source , file_destination)
+                
+                shutil.move(os.path.join(file_source, pdf_name[-1]+".pdf"), os.path.join(file_destination, pdf_name[-1]+".pdf"))
         else:
             print("no file exist")
     browser_lib.close_browser  
